@@ -275,7 +275,7 @@
 
 <div id="app"></div>
 
-<video id="video360" src="https://github.com/moadenn5/visualiseur-360/releases/download/v1/v1.mp4" preload="metadata" playsinline webkit-playsinline crossorigin="anonymous" style="display:none"></video>
+<video id="video360" preload="metadata" playsinline webkit-playsinline crossorigin="anonymous" style="display:none"></video>
 
 <!-- Écran de démarrage -->
 <div id="startScreen">
@@ -336,6 +336,8 @@
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/dashjs@4.7.4/dist/dash.all.min.js"></script>
+<script>dashjs.MediaPlayer().create().initialize(document.getElementById("video360"), "dash/manifest.mpd", false);</script>
 <script type="importmap">
 { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
 </script>
